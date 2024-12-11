@@ -1,26 +1,32 @@
-#Script to plot the logistic growth data
+# Script to plot the logistic growth data
 
-growth_data <- read.csv("???")
+# Reading the dataset
+growth_data <- read.csv("jose_logistic_data.csv")
 
+# Installing ggplot 2
 install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(aes(t,N), data = ???) +
+# Plot 1: N vs t (raw population data)
+
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
-  xlab("t") +
+  xlab("Time (t)") +
   
-  ylab("y") +
+  ylab("Population (N)") +
   
   theme_bw()
 
-ggplot(aes(t,???), data = growth_data) +
+# Plot 2: log(N) vs t (log-transformed population data)
+
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
-  xlab("t") +
+  xlab("Time (t)") +
   
-  ylab("y") +
+  ylab("Log(Population)") +
   
   scale_y_continuous(trans='log10')
