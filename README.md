@@ -1,14 +1,14 @@
-  #  Reproducible research: version control and R
+  #  Reproducible Research: Version Control and R
 
 **QUESTION 1**
 
-**Introduction and Data Source**:
+### **Introduction and Data Source**:
 
 This project investigates the growth of _Escherichia coli_ in a 1 ml test tube. The data simulates bacterial growth starting from an initial suspension in 100 μl of media, with exponential growth transitioning to a plateau as resources are depleted - the population eventually stabilises at the carrying capacity. 
 
 The aim of this project is to estimate initial population size (_N<sub>0</sub>_), growth rate (_r_) and carrying capacity (_K_) of the bacteria, using dataset "jose_logistic_data.csv" uploaded to the Open Science Framework's website (https://osf.io). This dataset records the population size (_N_) at consistent time intervals (_t_). 
 
-**Methods and Analysis**:
+### **Methods and Analysis**:
 
 1. **Data Exploration (plot_data.R)**:
 
@@ -28,7 +28,7 @@ A linear approximation was fitted to the data, focusing on two distinct growth s
    - Exponential growth phase (_t_ < 1500\) was used to estimate _r_ and _N<sub>0</sub>_ .
    - Plateau phase (_t_ > 2500\) was used to estimate _K_.
 
-## Results
+### Results (plot_data_and_model.R)
 - **Initial Population Size (N_0\)**: e<sup>6.8941709</sup> = 987 (to the nearest colony)
 - **Growth Rate (r\)**: 0.010086
 - **Carrying Capacity (K\)**: 6e+10
@@ -39,7 +39,7 @@ These estimates can be used to plot a logistic growth model, shown below and in 
 
 By comparing the two, we can see that these results provide a model with a close fit to the data, indicating the estimates for the parameters listed above are appropriate to describe the _E. coli_ population growth. 
 
-**QUESTION 2 - Use your estimates of N0 and r to calculate population size at t = 4980 min, assuming the population grows exponentially. How does it compare to the population size predicted under logistic growth?**
+## **QUESTION 2 - Use your estimates of N0 and r to calculate population size at t = 4980 min, assuming the population grows exponentially. How does it compare to the population size predicted under logistic growth?**
 
 **PLEASE NOTE: all calculations below can be found in the 'exp_vs_log_growth.R' script**
 
@@ -57,4 +57,9 @@ From calculations carried out in R:
 
 From the results of the models, it is clear that under exponential growth the population of _E. coli_ would become significantly bigger than if under logistic growth, where it would be capped at 6e+10 i.e. the carrying capacity. This is not surprising, as logistical models assume an eventual plateau in growth due to limiting factors such as space or resources essential for growth. On the other hand, exponential models do not take these limiting factors into account, assuming the bacteria can grow infinitely with infinite resource and space availability - hence the unrealistically large estimate provided. 
 
+## **QUESTION 3 - Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage.**
+
+**PLEASE NOTE: all graphing code can be found in the 'exp_vs_log_growth.R' script**
+
+The code from the script produces the following graph:
 
