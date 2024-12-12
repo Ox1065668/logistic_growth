@@ -63,3 +63,6 @@ From the results of the models, it is clear that under exponential growth the po
 
 The code from the script produces the following graph:
 
+![image](https://github.com/user-attachments/assets/db55cc73-2c7b-4edb-894c-7aaec4f9b2ca)
+
+
