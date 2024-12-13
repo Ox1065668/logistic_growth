@@ -10,6 +10,8 @@ The aim of this project is to estimate initial population size (_N<sub>0</sub>_)
 
 ### **Methods and Analysis**:
 
+The dataset "jose_logistic_data.csv" was used for this analysis.
+
 1. **Data Exploration (plot_data.R)**:
 
 We plotted:
@@ -23,7 +25,7 @@ b) The log-transformed data (log(_N_) vs. _t_) in order to visualise exponential
 ![image](https://github.com/user-attachments/assets/64642c14-be23-4caa-8585-a01422b9ebab)
 
 2. **Parameter Estimation (fit_linear_model.R)**:
-A linear approximation was fitted to the data, focusing on two distinct growth stages in order to esimate the parameters of initial population size, growth rate and carrying capacity. The details of how each value is acquired is within the code file. 
+A linear model was fitted to the data, focusing on two distinct growth stages in order to esimate the parameters of initial population size, growth rate and carrying capacity. The details of how each value is acquired is within the code file. 
 
    - Exponential growth phase (_t_ < 1500\) was used to estimate _r_ and _N<sub>0</sub>_ .
    - Plateau phase (_t_ > 2500\) was used to estimate _K_.
@@ -55,7 +57,7 @@ From calculations carried out in R:
 
 - **Logistic growth model:** returns a population value of 6e+10 at _t_ = 4980. 
 
-From the results of the models, it is clear that under exponential growth the population of _E. coli_ would become significantly bigger than if under logistic growth, where it would be capped at 6e+10 i.e. the carrying capacity. This is not surprising, as logistical models assume an eventual plateau in growth due to limiting factors such as space or resources essential for growth. On the other hand, exponential models do not take these limiting factors into account, assuming the bacteria can grow infinitely with infinite resource and space availability - hence the unrealistically large estimate provided. 
+From the results of the models, it is clear that under exponential growth the population of _E. coli_ would become orders of magnitude bigger than if under logistic growth, where it would be capped at 6e+10 i.e. the carrying capacity. This is not surprising, as logistical models assume an eventual plateau in growth due to limiting factors such as space or resources essential for growth. On the other hand, exponential models do not take these limiting factors into account, assuming the bacteria can grow infinitely with infinite resource and space availability - hence the unrealistically large estimate provided. 
 
 ## **QUESTION 3 - Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage.**
 
